@@ -1,0 +1,148 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav{
+  background-color: rgb(239, 149, 85);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search{
+  border: 2px solid #CF5C3F;
+	overflow: auto;
+	border-radius: 5px;
+  margin-right: 5px;
+}
+
+.Blog_search input[type="text"]
+{
+	border: 0px;
+	width: 67%;
+	padding: 8px 8px;
+}
+
+.submit{
+  border: 0px;
+  border-radius: 5px;
+	/* background: none; */
+	background-color: #CF5C3F;
+	color: #fff;
+	/* float: right; */
+	padding: 8px;
+	cursor:pointer;
+}
+
+
+.blog__page {
+  padding: 30px 170px;
+}
+
+.blog__page__header {
+  letter-spacing: -1px;
+  font-size: 35px;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 40px 0;
+}
+
+.blog {
+  min-width: 300px;
+  margin: auto;
+  background: white;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.blog > div {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px 0px 30px;
+}
+
+.blog > img {
+  width: 100%;
+}
+
+.sourceName > span {
+  display: inline;
+  background: rgba(38, 0, 128, 0.226);
+  font-size: 11px;
+  padding: 5px 6px;
+  color: rgba(0, 11, 43, 0.534);
+  border-radius: 3px;
+}
+
+.sourceName > p {
+  font-size: 10px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.sourceName {
+  display: flex;
+  align-items: center;
+}
+
+.blog > div > h1 {
+  font-size: 25px;
+  letter-spacing: -0.6px;
+  line-height: 1.3em;
+  padding: 10px 0;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.blog > div > p {
+  font-size: 13px;
+  line-height: 1.6em;
+  color: rgb(90, 90, 90);
+  padding-bottom: 30px;
+}
+
+.no__blogs {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.5em;
+}

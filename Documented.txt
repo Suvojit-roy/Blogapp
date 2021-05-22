@@ -1,0 +1,4 @@
+createSlice makes it easier to make the state and the reducers and pass them
+
+
+use Selector selects a particular part of the whole staTE AND RETURN THAT whereas useDispatch use the actions and chnage the state
