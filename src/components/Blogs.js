@@ -26,7 +26,42 @@ export const Blogs = () => {
     }, [dispatch, searchInput, url] );
     
     return (
-        <div className="blog__page">
+      
+      <div className="main" style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+      
+      <ul class="cards" style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+      {loading ? <h1 className="loading">Loading...</h1> : ""}
+      {/* <div className="blogs"> */}
+        {blogs?.articles?.map((blog) => (
+          <li class="cards_item">
+          <div class="card">
+            <div class="card_image" style={{height:"40%"}}><img src={blog.image}/></div>
+            <div class="card_content" style={{height:"60%"}}>
+              <section style={{height:"70%"}}><h2 class="card_title">{blog.title}</h2>
+              <p class="card_text">{blog.description}</p></section>
+              <a target="_blank" href={blog.url} rel="noreferrer" style={{textDecoration:"none",color:"Background",height:"30%"}}>
+              <button class="btn card_btn">Read More</button></a>
+            </div>
+          </div>
+        </li>
+        ))}
+      </ul>
+
+      {blogs?.totalArticles===0 && (<h3 style={{fontFamily:"monospace"}}>No blogs available, continue searching something else</h3>)}
+      </div>
+            
+      
+      
+      
+      
+    )
+}
+
+export default Blogs;
+
+
+
+  {/* <div className="blog__page">
       <h1 className="blog__page__header">Blogs</h1>
       {loading ? <h1 className="loading">Loading...</h1> : ""}
       <div className="blogs">
@@ -42,14 +77,7 @@ export const Blogs = () => {
               <p>{blog.description}</p>
             </div>
           </a>
-        ))}
+        ))} */}
 
                 
-                {blogs?.totalArticles===0 && (<h3 style={{fontFamily:"monospace"}}>No blogs available, continue searching something else</h3>)}
-            </div>
-            
-        </div>
-    )
-}
-
-export default Blogs;
+      
